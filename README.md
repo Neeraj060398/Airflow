@@ -1,19 +1,23 @@
 # Airflow
 
 <b>Prerequisites: </b><br>
-1)Docker <br>
-2)Visual Studio <br>
+1. Docker <br>
+2. Visual Studio <br>
 
 <br>
 The <b>'docker-compose.yaml'</b> file contains the necessary containers required for the Airflow project.
 
 <br><br>
 <b>About the project</b><br>
-Generate a new user each time the API is called, process the user's details, and store them in a PostgreSQL table.
- <br><br>
-The Airflow DAG has 5 tasks: <br>
-i)  create_table: Create a Postgres table if not exists with appropriate fields <br>
-ii) is_api_available: Checks if api is available or not <br>
-iii)extract_user: Extract user details <br>
-iv) process_usr: process that user details <br>
-v)  store_user: stores the user details into Postgres table <br>
+The project is designed to generate a new user each time the API is called, process the user's details, and store them in a PostgreSQL table.
+
+<br><br>
+<b>Airflow DAG Overview</b>
+<br><br>
+The Airflow DAG consists of 5 tasks:
+<br>
+<b>create_table:</b> Creates a PostgreSQL table if it does not already exist, with the appropriate fields. <br>
+<b>is_api_available:</b> Checks if the API is available. <br>
+<b>extract_user:</b> Extracts user details from the API. <br>
+<b>process_user:</b> Processes the extracted user details. <br>
+<b>store_user:</b> Stores the processed user details into the PostgreSQL table. <br>
